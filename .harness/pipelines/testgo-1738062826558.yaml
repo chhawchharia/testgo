@@ -26,7 +26,9 @@ pipeline:
                     connectorRef: account.harnessImage
                     image: alpine
                     shell: Sh
-                    command: ls
+                    command: |-
+                      docker build -t hello-server .
+                      docker run -d -p 8080:8080 hello-server
                   timeout: ""
                   type: Run
           infrastructure:
