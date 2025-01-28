@@ -26,7 +26,7 @@ pipeline:
                     connectorRef: account.harnessImage
                     image: alpine
                     shell: Sh
-                    command: echo "success!"
+                    command: go run main.go
                   timeout: ""
                   type: Run
           infrastructure:
