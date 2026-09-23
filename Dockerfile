@@ -6,7 +6,6 @@ LABEL maintainer="Nofar Bluestein <nofarb@gmail.com>"
 # build command:
 #
 #   CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo
-#
 ADD go-sample-app /bin/
 # Command to run the executable
 ENTRYPOINT ["/bin/go-sample-app"]
